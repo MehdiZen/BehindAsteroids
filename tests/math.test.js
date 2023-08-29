@@ -1,5 +1,5 @@
 const imjustken = require("../src/lib/math");
-describe('test normAngle',() => {
+describe('test suite : math.js',() => {
     test('Test etrange calcul function normAngle', () => {
         expect(imjustken.normAngle(-3*Math.PI/4)).toEqual(-2.356194490192345);
     })

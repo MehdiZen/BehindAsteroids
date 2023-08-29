@@ -1,6 +1,6 @@
 const randomAsteroidShape = require("../src/asteroids.js")
 
-describe('test AsteroidShape',() => {
+describe('test suite asteroid.js',() => {
     test('test 0', () => {
         expect(randomAsteroidShape(0)).toMatchObject([[0, 0], [0, 0], [-0, 0], [-0, -0]]);
     })
