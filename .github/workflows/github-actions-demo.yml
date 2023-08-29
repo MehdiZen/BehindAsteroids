@@ -21,7 +21,6 @@ on: [push]
 #
 jobs:
   build:
-
     # <!-- This is a YAML comment for use in annotated code examples. -->
 # You can run this workflow using a different operating systems.
 #
@@ -50,4 +49,20 @@ jobs:
       # This step runs the `build` script if there is one specified under the `scripts` key in your `package.json` file.
       # - run: npm run build --if-present
       # This step runs the `test` script that is specified under the `scripts` key in your `package.json` file.
+
+test:
+    runs-on: ubuntu-latest
+        strategy:
+      matrix:
+        node-version: [16.x, 18.x, 20.x]
+#
+    steps:
+      # This step uses the `actions/checkout` action to download a copy of your repository on the runner.
+      - uses: actions/checkout@v3
+      # This step uses the `actions/setup-node` action to set up Node.js for each version indicated by the `matrix.node-version` key above.
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm i 
       - run: npm test
