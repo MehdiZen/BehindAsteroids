@@ -15,7 +15,8 @@
     "liveserver": "mkdir -p target; cd target; live-server --no-browser",
     "zip": "cd target; zip -r ../target.zip .; cd ..; wc -c target.zip",
     "start": "npm run watch & npm run liveserver",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage" : "jest --coverage"
   },
   "repository": {
     "type": "git",
