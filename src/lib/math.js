@@ -5,7 +5,6 @@ function normAngle (a) {
   a>Math.PI ? a - 2*Math.PI : a;
 }
 
-
 function smoothstep (min, max, value) {
   var x = Math.max(0, Math.min(1, (value-min)/(max-min)));
   return x*x*(3 - 2*x);
@@ -14,7 +13,6 @@ function smoothstep (min, max, value) {
 function scoreTxt (s) {
   return (s<=9?"0":"")+s;
 }
-
 
 function dist (a, b) {
   var x = a[0]-b[0];
@@ -32,4 +30,12 @@ function circleCollides (a, b, r) {
   return x*x+y*y < r*r;
 }
 
-module.exports = {normAngle, smoothstep, scoreTxt, dist, length, circleCollides};
+var module = module || {};
+module.exports = {
+  normAngle : normAngle,
+  smoothstep: smoothstep,
+  scoreTxt: scoreTxt,
+  dist: dist,
+  length: length,
+  circleCollides: circleCollides
+};
