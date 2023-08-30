@@ -1,5 +1,5 @@
 /* global
-ctx path W H asteroids:true rotatingLetters incPosition incRotation MOBILE play
+ctx path W H asteroids:true rotatingLetters incPosition incRotation MOBILE play bite
 Asend AsendFail
 */
 
@@ -19,8 +19,6 @@ function randomAsteroidShape (lvl) {
   }
   return pts;
 }
-
-module.exports = randomAsteroidShape;
 
 function randomAsteroids () {
   asteroids = [];
@@ -102,3 +100,5 @@ function drawAsteroid (o) {
   path(o[4]);
   ctx.stroke();
 }
+var module = module || {};
+module.exports = randomAsteroidShape;

@@ -8,7 +8,6 @@ function normAngle (a) {
   a>Math.PI ? a - 2*Math.PI : a;
 }
 
-
 function smoothstep (min, max, value) {
   var x = Math.max(0, Math.min(1, (value-min)/(max-min)));
   return x*x*(3 - 2*x);
@@ -17,7 +16,6 @@ function smoothstep (min, max, value) {
 function scoreTxt (s) {
   return (s<=9?"0":"")+s;
 }
-
 
 function dist (a, b) {
   var x = a[0]-b[0];
@@ -35,7 +33,16 @@ function circleCollides (a, b, r) {
   return x*x+y*y < r*r;
 }
 
-module.exports = {normAngle, smoothstep, scoreTxt, dist, length, circleCollides};/* global ctx */
+var module = module || {};
+module.exports = {
+  normAngle : normAngle,
+  smoothstep: smoothstep,
+  scoreTxt: scoreTxt,
+  dist: dist,
+  length: length,
+  circleCollides: circleCollides
+};
+/* global ctx */
 
 function path (pts, noclose) { // eslint-disable-line no-unused-vars
   ctx.beginPath();
@@ -1652,7 +1659,7 @@ function aiLogic (smart) { // set the 3 AI inputs (rotate, shoot, boost)
   //DEBUG && closestAsteroid && addPolarDebug(closestAsteroid, closestAsteroid[2], closestAsteroid[3]);
 }
 /* global
-ctx path W H asteroids:true rotatingLetters incPosition incRotation MOBILE play
+ctx path W H asteroids:true rotatingLetters incPosition incRotation MOBILE play bite
 Asend AsendFail
 */
 
@@ -1672,8 +1679,6 @@ function randomAsteroidShape (lvl) {
   }
   return pts;
 }
-
-module.exports = randomAsteroidShape;
 
 function randomAsteroids () {
   asteroids = [];
@@ -1755,6 +1760,8 @@ function drawAsteroid (o) {
   path(o[4]);
   ctx.stroke();
 }
+var module = module || {};
+module.exports = randomAsteroidShape;
 /* global
 GAME_INC_PADDING W H t dt borderLength spaceship incomingObjects player
 playingSince randomAsteroidShape lifes dying ctx path MOBILE font helpVisible
