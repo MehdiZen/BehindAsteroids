@@ -12,7 +12,7 @@
     "build": "export NODE_ENV=production; npm run clean && npm run compileglsl && npm run concat && npm run minify && npm run gen && npm run zip",
     "build-nominify": "npm run clean && npm run compileglsl && npm run concat && npm run nominify && npm run gen",
     "watch": "npm run build-nominify; wr 'npm run build-nominify' src/ scripts/",
-    "liveserver": "mkdir -p target; cd target; live-server --no-browser",
+    "liveserver": "mkdir -p ./target; cd ./target; live-server --no-browser",
     "zip": "cd target; zip -r ../target.zip .; cd ..; wc -c target.zip",
     "start": "npm run watch & npm run liveserver",
     "nightwatch": "npx nightwatch ./test/",
