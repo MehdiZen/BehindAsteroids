@@ -46,5 +46,5 @@ jobs:
     - name: Run Nightwatch test
       run: xvfb-run --auto-servernum npm run nightwatch -- --env chrome
       
-    # - name: Stop Local Server
-    #   run: pkill -f "live-server"
+    - name: Stop Local Server
+      run: pkill -f "live-server"
