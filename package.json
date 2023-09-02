@@ -14,7 +14,7 @@
     "watch": "npm run build-nominify; wr 'npm run build-nominify' src/ scripts/",
     "liveserver": "mkdir -p target; cd target; live-server --no-browser",
     "zip": "cd target; zip -r ../target.zip .; cd ..; wc -c target.zip",
-    "start": "npm run watch, npm run start live-server --port=8080 --watch='./target' &",
+    "start": "npm run watch, npm run start live-server --port=8080 --watch='./target/index.html' &",
     "nightwatch": "npx nightwatch ./test/",
     "test": "jest"
   },
