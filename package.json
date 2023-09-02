@@ -15,7 +15,7 @@
     "liveserver": "mkdir -p target; cd target; live-server --no-browser",
     "zip": "cd target; zip -r ../target.zip .; cd ..; wc -c target.zip",
     "start": "npm run watch & npm run liveserver",
-    "nightwatch": "npm run start & npx nightwatch ./test/",
+    "nightwatch": "npx nightwatch ./test/",
     "test": "jest"
   },
   "repository": {
