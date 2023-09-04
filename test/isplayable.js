@@ -3,6 +3,15 @@ describe('Affichage', function() {
         client.url("http://localhost:8080/")
      client
         .waitForElementVisible('#c', 5000)
+        // .click('#u')
+        // .pause(2000)
+        // .moveTo('#u', 150, 150)
+        // .mouseButtonClick(0)
+        // .click('#u')
+        // .pause(2000)
+        // .click('#u')
+        // .pause(2000)
+        // .click('#u')
       console.log("game Started");
     });
 
