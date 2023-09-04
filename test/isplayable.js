@@ -1,6 +1,6 @@
 describe('Affichage', function() {
     it('Can I start game', function(client) {
-        client.url("http://localhost:8080/")
+        client.url("http://127.0.0.1:8080/")
      client
         .waitForElementVisible('#c', 5000)
         // .click('#u')
