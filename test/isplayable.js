@@ -48,13 +48,13 @@ describe('Affichage', function() {
           lettre = templettre;
           console.log("Nombres de lettres testé =>", n);
           console.log("Nombres d'asteroides envoyés =>", n);
-          if(n >= 2 && i === 4){
-            client.assert.ok(n>=2)
+          if(i === 4){
+            client.assert.ok(n >= 2)
           }
-          else if (i === 4 && n < 2){
-            client.assert.ok(n === "Le plan a échoué")
+          // else if (i === 4 && n < 2){
+          //   client.assert.ok(n === "Le plan a échoué")
   
-          }
+          // }
         client.pause(500)
         })
       }
