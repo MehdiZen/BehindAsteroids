@@ -1849,6 +1849,7 @@ function createInc () {
     ampRotRatio = 0.5 + 0.4 * Math.random();
   }
 
+    document.getElementById("key").innerHTML = String.fromCharCode(key);
   incomingObjects.push([
     pos,
     // velocity

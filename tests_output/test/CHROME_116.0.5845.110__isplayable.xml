@@ -5,14 +5,18 @@
 
   <testsuite name="test.isplayable"
     errors="0" failures="0" hostname="" id="" package="isplayable" skipped="0"
-    tests="2" time="73.66" timestamp="">
+    tests="2" time="80.65" timestamp="">
   
-    <testcase name="Can I start game" classname="test.isplayable" time="3.259" assertions="1">
+    <testcase name="Can I start game" classname="test.isplayable" time="14.89" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Can I play" classname="test.isplayable" time="33.57" assertions="0">
+    <testcase name="Can I play" classname="test.isplayable" time="25.43" assertions="2">
+
+    
+
+    
     </testcase>
   
 
