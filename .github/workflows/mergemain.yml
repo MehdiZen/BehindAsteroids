@@ -40,4 +40,4 @@ jobs:
       #   run: npm test
 
       - name : ESLINT
-        run: eslint . --ext .js,.jsx,.ts,.tsx 
+        run: npx eslint . --ext .js,.jsx,.ts,.tsx 
