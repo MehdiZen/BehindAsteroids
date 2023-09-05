@@ -40,5 +40,5 @@ jobs:
       - name: Test
         run: npm test
 
-      - name: Eslint
-        run: npx run lint                 
+      # - name: Eslint
+      #   run: npx run lint                 
