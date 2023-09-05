@@ -41,12 +41,9 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
+
       - name: Test
         run: npm test
 
-  eslint:
-    name: eslint
-    runs-on: ubuntu-latest
-    steps:
       - name: Eslint
         run: npx run lint                 
